@@ -1,0 +1,204 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.grid_1 {
+  width: 60px;
+}
+.grid_1 p {
+  background-color: #000000;
+  color: #fe0000;
+}
+.grid_2 {
+  width: 140px;
+}
+.grid_2 p {
+  background-color: #ffff01;
+  color: #000000;
+}
+.grid_3 {
+  width: 220px;
+}
+.grid_3 p {
+  background-color: #808080;
+}
+.grid_4 {
+  width: 300px;
+}
+.grid_4 p {
+  background-color: #008001;
+  color: #fffeff;
+}
+.grid_5 {
+  width: 380px;
+}
+.grid_6 {
+  width: 460px;
+}
+.grid_6 p {
+  background-color: #ff00ff;
+  color: #01ffff;
+}
+.grid_7 {
+  width: 540px;
+}
+.grid_8 {
+  width: 620px;
+}
+.grid_8 p {
+  background-color: #01ffff;
+  color: #008001;
+}
+.grid_8 .grid_4 p {
+  background-color: #008001;
+  color: #fffeff;
+}
+.grid_8 .grid_2 p {
+  background-color: #ffff01;
+  color: #000000;
+}
+.grid_9 {
+  width: 700px;
+}
+.grid_9 p {
+  background-color: #ff6448;
+  color: #01ffff;
+}
+.grid_10 {
+  width: 780px;
+}
+.grid_11 {
+  width: 860px;
+}
+.grid_11 p {
+  background-color: #fe0000;
+  color: #000000;
+}
+.grid_12 {
+  width: 940px;
+}
+.grid_12 p {
+  background-color: #000000;
+  color: #ffff01;
+}
+.column {
+  margin: 0 10px;
+  overflow: hidden;
+  float: left;
+  display: inline;
+}
+.row {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.row .row {
+  margin: 0 -10px;
+  width: auto;
+  display: inline-block;
+}
+.row p {
+  font: 60px/100px Helvetica;
+  text-align: center;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: solid 1px #000000;
+}
+.red {
+  color: #fe0000;
+}
+.lightgreen {
+  color: #7eff00;
+}
+.blue {
+  color: #0000fd;
+}
+@media only screen and (min-width: 769px) and (max-width: 960px) {
+  .grid_1 {
+    width: 40px;
+  }
+  .grid_2 {
+    width: 90px;
+  }
+  .grid_3 {
+    width: 140px;
+  }
+  .grid_4 {
+    width: 190px;
+  }
+  .grid_5 {
+    width: 240px;
+  }
+  .grid_6 {
+    width: 290px;
+  }
+  .grid_7 {
+    width: 340px;
+  }
+  .grid_8 {
+    width: 390px;
+  }
+  .grid_8 .column {
+    margin: 0 5px;
+  }
+  .grid_9 {
+    width: 440px;
+  }
+  .grid_10 {
+    width: 490px;
+  }
+  .grid_11 {
+    width: 540px;
+  }
+  .grid_12 {
+    width: 590px;
+  }
+  .column {
+    margin: 0 10px;
+    overflow: hidden;
+    float: left;
+    display: inline;
+  }
+  .row {
+    width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .row .row {
+    margin: 0 -10px;
+    width: auto;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .row p {
+    margin: 10px;
+    font: 30px/70px Helvetica;
+  }
+  .row .row {
+    width: 100%;
+    margin: 0px;
+  }
+  .grid_1,
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .grid_5,
+  .grid_6,
+  .grid_7,
+  .grid_8,
+  .grid_9,
+  .grid_10,
+  .grid_11,
+  .grid_12 {
+    width: 100%;
+    margin: 0px;
+  }
+}
