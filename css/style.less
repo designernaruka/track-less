@@ -56,19 +56,18 @@ body{
 		background-color: @skyblue;
 		color: @green;
 	}
-	.grid_4{
-		p{
-			background-color:@green;
-			color: @white;
-		}
+}
+.grid_4{
+	p{
+		background-color:@green;
+		color: @white;
 	}
-	.grid_2{
-		p{
-			background-color:@yellow;
-			color: @black;
-		}
+}
+.grid_2{
+	p{
+		background-color:@yellow;
+		color: @black;
 	}
-
 }
 .grid_9 {
 	.theWidth(9,16);
@@ -186,11 +185,11 @@ body{
 		width: @totalWidth;
 		margin: 0 auto;
 		overflow: hidden;
-	}
-	.row .row {
-		margin: 0 (@gutter * -1);
-		width: auto;
-		display: inline-block;
+		.row {
+			margin: 0 (@gutter * -1);
+			width: auto;
+			display: inline-block;
+		}
 	}
 
 }
@@ -211,16 +210,16 @@ body{
 		.theWidth(1,0);
 		margin: 0 auto;
 		overflow: hidden;
+		.row{
+			width:100%;
+			margin:0px;
+		}
 	}
 	.row {
 		p{
 			margin: 10px;
 			font:30px/70px Helvetica;
 		}
-	}
-	.row .row{
-		width:100%;
-		margin:0px;
 	}
 
 	.grid_1,

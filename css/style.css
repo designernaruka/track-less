@@ -49,11 +49,11 @@ body {
   background-color: #01ffff;
   color: #008001;
 }
-.grid_8 .grid_4 p {
+.grid_4 p {
   background-color: #008001;
   color: #fffeff;
 }
-.grid_8 .grid_2 p {
+.grid_2 p {
   background-color: #ffff01;
   color: #000000;
 }
@@ -178,13 +178,13 @@ body {
     margin: 0 auto;
     overflow: hidden;
   }
-  .row p {
-    margin: 10px;
-    font: 30px/70px Helvetica;
-  }
   .row .row {
     width: 100%;
     margin: 0px;
+  }
+  .row p {
+    margin: 10px;
+    font: 30px/70px Helvetica;
   }
   .grid_1,
   .grid_2,
