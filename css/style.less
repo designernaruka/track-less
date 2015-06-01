@@ -1,20 +1,35 @@
-@import url("mixins.css");
-
-body{
-	padding:0px;
-	margin:0px;
-}
-
 @columnWidth: 60px;
-@gutter: 10px;
+@gutter: 8px;
 
 @allColumns: @columnWidth * 12;
 @allGutters: (@gutter * 12) * 2;
 @totalWidth: @allColumns + @allGutters;
 
+
+@black: #000000;
+@red: #fe0000;
+@skyblue: #01ffff;
+@green: #008001;
+@yellow: #ffff01;
+@pink: #ff00ff;
+@l_mehrun: #ff6448;
+@white: #fffeff;
+@lightgreen: #7eff00;
+@blue: #0000fd;	
+@grey: #808080;
+
+
+.border (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border:solid 1px #000000;
+}
+
 .theWidth (@theColumn: 1, @theGutter: 0) {
   width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
 }
+
 
 .grid_1 {
 	.theWidth(1,0);
@@ -34,6 +49,7 @@ body{
 	.theWidth(3,4);
 	p{
 		background-color: @grey;
+		color: @black;
 	}
 }
 .grid_4 {
@@ -54,21 +70,11 @@ body{
 .grid_7 { .theWidth(7,12); }
 .grid_8 {
 	.theWidth(8,14);
-	p{
-		background-color: @skyblue;
-		color: @green;
-	}
-}
-.grid_4{
-	p{
-		background-color:@green;
-		color: @white;
-	}
-}
-.grid_2{
-	p{
-		background-color:@yellow;
-		color: @black;
+	.grid_8{
+		p{
+			background-color: @skyblue;
+			color: @green;
+		}
 	}
 }
 .grid_9 {
@@ -120,112 +126,30 @@ body{
 	}
 }
 
-.red{ color: @red; }
-.lightgreen{ color: @lightgreen; }
-.blue{ color: @blue; }
-
-.border (@radius: 5px) {
-  border-radius: @radius;
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-  border:solid 1px #000000;
+.eightcol{
+	background-color: @skyblue;
+	color: @green;
 }
 
-@tablets: ~"only screen and (min-width: 769px) and (max-width: 960px)";
-
-@smartphones: ~"only screen and (min-width: 320px) and (max-width: 768px)";
-
-@media @tablets {
-	@columnWidth: 40px;
-	@gutter: 10px;
-
-	@allColumns: @columnWidth * 12;
-	@allGutters: (@gutter * 12) * 2;
-	@totalWidth: @allColumns + @allGutters;
-
-	.theWidth (@theColumn: 1, @theGutter: 0) {
-	  width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
-	}
-
-	.grid_1 { .theWidth(1,0); }
-	.grid_2 { .theWidth(2,1); }
-	.grid_3 { .theWidth(3,2); }
-	.grid_4 { .theWidth(4,3); }
-	.grid_5 { .theWidth(5,4); }
-	.grid_6 { .theWidth(6,5); }
-	.grid_7 { .theWidth(7,6); }
-	.grid_8 {
-		.theWidth(8,7);
-		.column{
-			margin:0 5px;
-		}
-	}
-	.grid_9 { .theWidth(9,8); }
-	.grid_10 { .theWidth(10,9); }
-	.grid_11 { .theWidth(11,10); }
-	.grid_12 { .theWidth(12,11); }
-
-	.column {
-		margin: 0 @gutter;
-		overflow: hidden;
-		float: left;
-		display: inline;
-	}
-	.row {
-		width: @totalWidth;
-		margin: 0 auto;
-		overflow: hidden;
-		.row {
-			margin: 0 (@gutter * -1);
-			width: auto;
-			display: inline-block;
-		}
-	}
-
+.fourcol{
+	background-color: @green;
+	color: @white;
 }
 
-@media @smartphones{
-	@columnWidth: 100%;
-	@gutter: 0px;
+.twocol{
+	background-color: @yellow;
+	color: @black;
+}
 
-	@allColumns: @columnWidth;
-	@allGutters: (@gutter) * 2;
-	@totalWidth: @allColumns + @allGutters;
+.sixcol{
+	background-color: @pink;
+	color: @skyblue;
+}
 
-	.theWidth (@theColumn: 1, @theGutter: 0) {
-		width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
-	}
+.threecol{
+	background-color: @grey;
+}
 
-	.row {
-		.theWidth(1,0);
-		margin: 0 auto;
-		overflow: hidden;
-		.row{
-			width:100%;
-			margin:0px;
-		}
-	}
-	.row {
-		p{
-			margin: 10px;
-			font:30px/70px Helvetica;
-		}
-	}
-
-	.grid_1,
-	.grid_2,
-	.grid_3,
-	.grid_4,
-	.grid_5,
-	.grid_6,
-	.grid_7,
-	.grid_8,
-	.grid_9,
-	.grid_10,
-	.grid_11,
-	.grid_12 {
-		.theWidth(1,0);
-		margin: @gutter;
-	}
-
+.threecol{
+	background-color: @l_mehrun;
 }
