@@ -1,0 +1,15 @@
+/* Color Mixins */
+/* Color Mixins End  */
+/* border -radius mixins */
+/* border -radius mixins end */
+/* paragraph property mixin */
+.paragraph {
+  font: 60px/100px Helvetica;
+  text-align: center;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: solid 1px #000000;
+}
+/* paragraph property mixin */
